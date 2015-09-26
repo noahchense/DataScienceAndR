@@ -15,6 +15,7 @@ build_script:
   - Rscript -e "install.packages(c('swirl'), repos = 'http://cran.r-project.org')"
   - rm -rf .git
   - Rscript -e "setwd('..');swirl::install_course_directory('DataScienceAndR')"
+  - Rscript -e "devtools::install_github('TaipeiRHacker/DataTaipei')"
 
 test_script:
   - Rscript -e "source('https://raw.githubusercontent.com/wush978/DataScienceAndR/master/test_lesson.R');test_course('DataScienceAndR')"
